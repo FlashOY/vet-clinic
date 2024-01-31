@@ -63,7 +63,7 @@ public class Main {
 
          return  client;
     }
-
+//Fixed bug
      static boolean isEmailValid(String email) {
         Pattern pattern = Pattern.compile(EMAIL_PATTERN);
         Matcher matcher = pattern.matcher(email);

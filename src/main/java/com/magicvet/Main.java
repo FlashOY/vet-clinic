@@ -45,7 +45,7 @@ public class Main {
 
             if (isEmailValid(email)) {
                 Client client = buildClient(email);
-                System.out.println("New client: " + client.firstName + " " + client.lastname + " (" +client.email);
+                System.out.println("New client: " + client.firstName + " " + client.lastname + " (" +client.email +")");
             } else {
                 System.out.println("Provided email is invalid.");
             }
@@ -59,7 +59,7 @@ public class Main {
          client.firstName = SCANNER.nextLine();
 
          System.out.println("Last name: ");
-         client.firstName = SCANNER.nextLine();
+         client.lastname = SCANNER.nextLine();
 
          return  client;
     }

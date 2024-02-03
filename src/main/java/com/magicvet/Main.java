@@ -71,7 +71,7 @@ public class Main {
 
 
     }
-
+//Checking name, email, lastname
     private static boolean isLastNameValid(String lastname) {
         Pattern pattern_lastname = Pattern.compile(LASTNAME_PATTERN);
         Matcher matcher2 = pattern_lastname.matcher(lastname);

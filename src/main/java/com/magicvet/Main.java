@@ -26,7 +26,7 @@ public class Main {
         Application_Runner runner = new Application_Runner();
         runner.run(); }
         else {
-            System.out.println("Have a niceday!");
+            System.out.println("Have a niceday!!!");
         }
     }
 

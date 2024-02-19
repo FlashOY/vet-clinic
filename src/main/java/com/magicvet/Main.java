@@ -12,12 +12,22 @@ import static main.java.com.magicvet.component.Autenticator.auth;
 public class Main {
 
 
-   public static Scanner SCANNER = new Scanner(System.in);
+     public static Scanner SCANNER = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
 
     public static void main(String[] args) {
+
+        System.out.print("Does the client want to register a pet? (yes/no): ");
+
+        String wantsRegistrationInput = scanner.nextLine().toLowerCase();
+        boolean wantsRegistration = wantsRegistrationInput.equals("yes");
+        if(wantsRegistration) {
         Application_Runner runner = new Application_Runner();
-        runner.run();
+        runner.run(); }
+        else {
+            System.out.println("Have a niceday!");
+        }
     }
 
     }

@@ -18,7 +18,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.print("Does the client want to register a pet? (yes/no): ");
+        System.out.print("Do you want to register a pet? (yes/no): ");
 
         String wantsRegistrationInput = scanner.nextLine().toLowerCase();
         boolean wantsRegistration = wantsRegistrationInput.equals("yes");

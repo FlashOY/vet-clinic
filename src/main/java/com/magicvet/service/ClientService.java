@@ -8,9 +8,9 @@ import java.util.regex.Pattern;
 
 public class ClientService {
 
-    private static String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
-  private   static String NAME_PATTERN = "^[a-zA-Z-]{3,}+$";
-  private   static String LASTNAME_PATTERN = "^[a-zA-Z-]{3,}$";
+    private static final String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+  private   static final String NAME_PATTERN = "^[a-zA-Z-]{3,}+$";
+  private   static final String LASTNAME_PATTERN = "^[a-zA-Z-]{3,}$";
 
 public Client registerNewClient() {
     Client client = null;

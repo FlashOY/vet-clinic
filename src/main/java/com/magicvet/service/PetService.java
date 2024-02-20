@@ -8,6 +8,8 @@ public class PetService {
 
     private static final String DOG_TYPE = "dog";
 
+
+
     public Pet registerNewPet(){
         Pet pet = new Pet();
 
@@ -47,14 +49,15 @@ public class PetService {
     private Pet buildPet(String type) {
         Pet pet = new Pet();
         pet.setType(type);
+
         System.out.println("Age: ");
         pet.setAge(Main.SCANNER.nextLine());
 
         System.out.println("Name: ");
-        pet.setAge(Main.SCANNER.nextLine());
+        pet.setName(Main.SCANNER.nextLine());
 
         System.out.println("Sex (Male / female): ");
-        pet.setAge(Main.SCANNER.nextLine());
+        pet.setSex(Main.SCANNER.nextLine());
         
         return pet;
     }

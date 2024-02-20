@@ -6,16 +6,16 @@ public class Client {
    private String firstName;
    private String lastname;
    private  String email;
-   private Pet pet;
+   private  Pet pet;
 
 
    @Override
    public String toString() {
        return "Client {"
-               +"\n\tfirstName = " +firstName
+               +"\n\tfirstName = " + firstName
                + ", lastName = " + lastname
                + ", email = " + email
-               + ", \n\tpet = " + pet
+              + "\n\tpet= " + pet
                + "\n}";
    }
 
@@ -34,6 +34,8 @@ public class Client {
     public int hashCode() {
         return Objects.hash(firstName, lastname, email, pet);
     }
+
+
 
     public String getFirstName() {
         return firstName;
@@ -62,6 +64,7 @@ public class Client {
     public Pet getPet() {
         return pet;
     }
+
 
     public void setPet(Pet pet) {
         this.pet = pet;

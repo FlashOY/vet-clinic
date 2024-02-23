@@ -3,27 +3,31 @@ package main.java.com.magicvet.model;
 import java.util.Objects;
 
 public class Dog extends Pet{
-    private String size;
-
-    public static final String XS ="XS";
-    public static final String S ="S";
-    public static final String M ="M";
-    public static final String L ="L";
-    public static final String XL ="XL";
-
+    private Size size;
 
 
     public Dog () { }
 
-    public Dog(String size) {
+    @Override
+    public String toString() {
+        return "Pet {"
+                + "type = " + getType()
+                + ", sex = " + getSex()
+                + ", age = " + getAge()
+                + ", name = " + getName()
+                + ", size = " + getSize()
+                + ", ownerName = " + getOwnerName()
+                + ", registrationDate = " + getRegistrationDate()
+                + "}";
+    }
+
+
+
+    public Dog(Size size) {
 
         this.size= size;
     }
 
-    @Override
-    public String toString() {
-        return "Size " + size;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -39,11 +43,50 @@ public class Dog extends Pet{
         return Objects.hash(super.hashCode(), size);
     }
 
-    public void setSize(String size) {
+    public void setSize(Size size) {
         this.size = size;
     }
 
-    public String getSize() {
+    public Size getSize() {
         return size;
+    }
+
+
+
+    public enum Size {
+        XS(1),
+        S(2),
+        M(3),
+        L(4),
+        XL(5),
+        UNKNOWN(0);
+
+
+
+        private final int value;
+
+        Size(int value) {
+            this.value = value;
+
+
+        }
+
+        public static Size fromString(String value) {
+            for (Size size : values()) {
+                if (size.toString().equals(value)) {
+                    return size;
+                }
+            }
+
+            System.out.println("Unable to parse value '" + value + "'. Using default value: " + UNKNOWN);
+
+            return UNKNOWN;
+        }
+
+        public int getValue() {
+            return value;
+
+        }
+
     }
 }

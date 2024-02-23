@@ -80,4 +80,8 @@ public abstract class Pet {
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
     }
+
+            public LocalDateTime getRegistrationDate() {
+        return registrationDate;
+    }
 }

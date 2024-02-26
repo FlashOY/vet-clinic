@@ -94,13 +94,5 @@ public class Dog extends Pet{
     }
 }
  
-        }
-            public int getValue() {
-                return value;
-            }
-
-        }
-
-    }
 
  

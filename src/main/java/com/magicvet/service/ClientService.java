@@ -11,6 +11,7 @@ public class ClientService {
     private static final String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
   private   static final String NAME_PATTERN = "^[a-zA-Z-]{3,}+$";
   private   static final String LASTNAME_PATTERN = "^[a-zA-Z-]{3,}$";
+  private   static final String LOCATION_PATTERN = "^[a-zA-Z]+$";
 
 public Client registerNewClient() {
     Client client = null;
@@ -25,16 +26,23 @@ public Client registerNewClient() {
         System.out.println("Last name: ");
         String lastname = Main.SCANNER.nextLine();
 
+    System.out.println("Location: ");
+    String location = Main.SCANNER.nextLine();
+
 
 
 
         if (isEmailValid(email)) {
-            if(isNameValid(name)){
-                if(isLastNameValid(lastname)) {
-                    client = buildClient(email, name, lastname);
-                    System.out.println("New client: " + client.getFirstName()
-                            + " " + client.getLastname() + " ("
-                            + client.getEmail() + ")");
+            if (isNameValid(name)) {
+                if (isLastNameValid(lastname)) {
+                    if (isLocationValid(location)) {
+                        client = buildClient(email, name, lastname, location);
+                        System.out.println("New client: " + client.getFirstName()
+                                + " " + client.getLastname() + " ("
+                                + client.getEmail() + ")");
+                    } else {
+                        System.out.println("Provided location is invalid.");
+                    }
                 } else {
                     System.out.println("Provided lastname is invalid.");
                 }
@@ -44,7 +52,6 @@ public Client registerNewClient() {
         } else {
             System.out.println("Provided email is invalid.");
         }
-
         return client;
     }
 
@@ -67,6 +74,12 @@ public Client registerNewClient() {
         return matcher.matches();
     }
 
+    private static boolean isLocationValid(String location) {
+        Pattern pattern_location = Pattern.compile(LOCATION_PATTERN);
+        Matcher matcher = pattern_location.matcher(location);
+        return matcher.matches();
+    }
+
 
 
     /*
@@ -84,11 +97,12 @@ public Client registerNewClient() {
             return matcher.matches();
         }
     */
-  private  static Client buildClient(String email, String name, String lastname) {
+  private  static Client buildClient(String email, String name, String lastname, String location) {
         Client client = new Client();
         client.setEmail(email);
         client.setFirstName(name);
         client.setLastname(lastname);
+      client.setLocation(Client.Location.valueOf(location));
 
 
         // System.out.println("First name: ");

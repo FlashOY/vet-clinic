@@ -14,6 +14,8 @@ public class Client {
    private  String email;
    private List<Pet> pets = new ArrayList<>(); // таким чином поле pets ніколи не буде null (ініціализовано за замовчуванням)
 
+    private Location location;
+
 
    private final LocalDateTime registrationClientDate = LocalDateTime.now();
 
@@ -24,6 +26,7 @@ public class Client {
                +"\n\tfirstName = " + firstName
                + ", lastName = " + lastname
                + ", email = " + email
+               + ", location = " + location
               + ", pets= " + pets
               +  "\n\tregistrationClientDate= " + registrationClientDate.format(FORMATTER)
                + "\n}";
@@ -71,12 +74,12 @@ public class Client {
         this.email = email;
     }
 
-    public List<Pet> getPet() {
+    public List<Pet> getPets() {
         return pets;
     }
 
 
-    public void setPet(List<Pet> pet) {
+    public void setPets(List<Pet> pet) {
         this.pets = pet;
     }
 
@@ -87,6 +90,20 @@ public class Client {
 
     public void addPet(Pet pet) {
        pets.add(pet);
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public enum Location {
+        KYIV,
+        LVIV,
+        ODESSA;
     }
 
 

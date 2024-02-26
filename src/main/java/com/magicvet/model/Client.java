@@ -14,6 +14,7 @@ public class Client {
    private  String email;
    private List<Pet> pets = new ArrayList<>(); // таким чином поле pets ніколи не буде null (ініціализовано за замовчуванням)
 
+
    private final LocalDateTime registrationClientDate = LocalDateTime.now();
 
 
@@ -79,9 +80,15 @@ public class Client {
         this.pets = pet;
     }
 
+    public void sortPetsByHealthState() {
+        pets.sort(Pet.healthStateComparator);
+    }
+
+
     public void addPet(Pet pet) {
        pets.add(pet);
     }
+
 
 }
 

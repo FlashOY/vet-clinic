@@ -4,9 +4,11 @@ import java.util.Objects;
 
 public class Dog extends Pet{
     private Size size;
+ 
 
 
     public Dog () { }
+ 
 
     @Override
     public String toString() {
@@ -54,8 +56,7 @@ public class Dog extends Pet{
         return size;
     }
 
-
-
+ 
     public enum Size {
         XS(1),
         S(2),
@@ -64,12 +65,11 @@ public class Dog extends Pet{
         XL(5),
         UNKNOWN(0);
 
-
-
         private final int value;
 
         Size(int value) {
             this.value = value;
+ 
 
 
         }
@@ -93,3 +93,14 @@ public class Dog extends Pet{
 
     }
 }
+ 
+        }
+            public int getValue() {
+                return value;
+            }
+
+        }
+
+    }
+
+ 

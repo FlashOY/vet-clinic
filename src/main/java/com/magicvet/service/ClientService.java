@@ -13,6 +13,8 @@ public class ClientService {
   private   static final String LASTNAME_PATTERN = "^[a-zA-Z-]{3,}$";
   private   static final String LOCATION_PATTERN = "^[a-zA-Z]+$";
 
+
+
 public Client registerNewClient() {
     Client client = null;
 
@@ -102,6 +104,13 @@ public Client registerNewClient() {
         client.setEmail(email);
         client.setFirstName(name);
         client.setLastname(lastname);
+
+      try {
+            client.setLocation(Client.Location.valueOf(location));
+        } catch (IllegalArgumentException e){
+            location = String.valueOf(Client.Location.UNKNOWN);
+            System.out.println("Unable to parse value'. Using default value: " + Client.Location.UNKNOWN);
+        }
       client.setLocation(Client.Location.valueOf(location));
 
 

@@ -88,6 +88,20 @@ public class Dog extends Pet{
             return UNKNOWN;
         }
 
+// Попередній варіант коду
+  //      public static Size fromString(String value) {
+   //         for (Size size : values()) {
+   //             if (size.toString().equals(value)) {
+   //                 return size;
+ //               }
+
+ //           }
+
+  //          System.out.println("Unable to parse value '" + value + "'. Using default value: " + UNKNOWN);
+
+//            return UNKNOWN;
+ //       }
+
 
         public int getValue() {
             return value;

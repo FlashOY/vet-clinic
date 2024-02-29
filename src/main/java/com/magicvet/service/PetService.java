@@ -39,12 +39,12 @@ public class PetService {
         System.out.println("Name: ");
         pet.setName(Main.SCANNER.nextLine());
 
-        System.out.println("Sex (Male / female): ");
+        System.out.println("Sex (male / female): ");
         pet.setSex(Main.SCANNER.nextLine());
 
         System.out.println("Health state (GOOD / MEDIUM / CRITICAL / UNKNOWN): ");
         String healthState = Main.SCANNER.nextLine();
-        ((Pet) pet).setHealthState(Pet.HealthState.valueOf(healthState.toUpperCase()));
+        ((Pet) pet).setHealthState(Pet.HealthState.fromString(healthState.toUpperCase()));
 
 
         if (type.equals(DOG_TYPE)) {

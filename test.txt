@@ -1,4 +1,0 @@
-Client {
-	firstName = Alex, lastName = Ysnyi, email = qwe.qwe@qwe.com, location = LVIV, pets= [Pet {type = dog, sex = male, age = 4, name = Petka, size = L, ownerName = Alex Ysnyi, registrationDate = 2024-02-29T16:47:38.537421800, healthState = GOOD}]
-	registrationClientDate= 29.02.2024 16:47
-}

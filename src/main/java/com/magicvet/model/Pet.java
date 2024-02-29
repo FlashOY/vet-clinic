@@ -122,17 +122,29 @@ public abstract class Pet {
 
         }
 
+
         public static Pet.HealthState fromString(String value_1) {
-            for (Pet.HealthState healthState : values()) {
-                if (healthState.toString().equals(value_1)) {
-                    return healthState;
-                }
+            try {
+                Pet.HealthState.valueOf(value_1);
+            } catch (IllegalArgumentException e){
+                String HealthState = String.valueOf(Pet.HealthState.UNKNOWN);
+                System.out.println("Unable to parse value'. Using default value: " + Pet.HealthState.UNKNOWN);
             }
-
             System.out.println("Unable to parse value '" + value_1 + "'. Using default value: " + UNKNOWN);
-
             return UNKNOWN;
         }
+
+   //     public static Pet.HealthState fromString(String value_1) {
+    //        for (Pet.HealthState healthState : values()) {
+   //             if (healthState.toString().equals(value_1)) {
+    //                return healthState;
+    //            }
+    //        }
+
+      //      System.out.println("Unable to parse value '" + value_1 + "'. Using default value: " + UNKNOWN);
+
+   //         return UNKNOWN;
+    //    }
 
         public int getValue_1() {
             return value_1;

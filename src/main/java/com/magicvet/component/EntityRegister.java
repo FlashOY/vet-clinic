@@ -15,6 +15,8 @@ public class EntityRegister {
     private static final PetService petService = new PetService();
     public static char[] v_String;
 
+    public static char[]  v_String2;
+
 
 
     static void registerClients() {
@@ -61,6 +63,16 @@ public class EntityRegister {
         clientsByLocation.put(Client.Location.LVIV, fromLviv);
         clientsByLocation.put(Client.Location.ODESSA, fromOdessa);
         clientsByLocation.put(Client.Location.UNKNOWN, unknownLocation);
+
+        String v_String2 = String.valueOf(clientsByLocation);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(
+                new OutputStreamWriter(new FileOutputStream("Information_about_clients.txt")))) {
+            bufferedWriter.write(String.valueOf(v_String2));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }   catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         return clientsByLocation;
 

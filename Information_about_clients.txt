@@ -1,7 +1,10 @@
-Client {
-	firstName = Vasia, lastName = Pupkin, email = vasia.pupkin@gmail.com, location = KYIV, pets= [Pet {type = dog, sex = male, age = 4, name = Petka, size = S, ownerName = Vasia Pupkin, registrationDate = 2024-02-29T17:21:39.958761500, healthState = GOOD}, Pet {
-	type = cat, sex = female, age = 1, name = Momo, ownerName = Vasia Pupkin,registrationDate = 17:21 29/02/2024,
+{ODESSA=[], UNKNOWN=[], KYIV=[Client {
+	firstName = Vaasia, lastName = Pupkin, email = qe.qwe@qwe.com, location = KYIV, pets= [Pet {type = dog, sex = male, age = 4, name = Petka, size = S, ownerName = Vaasia Pupkin, registrationDate = 2024-02-29T17:41:39.279716900, healthState = GOOD}]
+	registrationClientDate= 29.02.2024 17:41
+}, Client {
+	firstName = Vasilina, lastName = Pupkina, email = qweqwe.qweqwe@qwe.com, location = KYIV, pets= [Pet {
+	type = cat, sex = female, age = Momo, name = Momo, ownerName = Vasilina Pupkina,registrationDate = 17:42 29/02/2024,
 	healthState = UNKNOWN
 }]
-	registrationClientDate= 29.02.2024 17:21
-}
+	registrationClientDate= 29.02.2024 17:42
+}], LVIV=[]}

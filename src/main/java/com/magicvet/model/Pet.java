@@ -125,7 +125,7 @@ public abstract class Pet {
 
         public static Pet.HealthState fromString(String value_1) {
             try {
-                Pet.HealthState.valueOf(value_1);
+                return Pet.HealthState.valueOf(value_1.toUpperCase());
             } catch (IllegalArgumentException e){
                 String HealthState = String.valueOf(Pet.HealthState.UNKNOWN);
                 System.out.println("Unable to parse value'. Using default value: " + Pet.HealthState.UNKNOWN);

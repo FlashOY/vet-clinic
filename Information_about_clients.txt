@@ -1,0 +1,7 @@
+Client {
+	firstName = Vasia, lastName = Pupkin, email = vasia.pupkin@gmail.com, location = KYIV, pets= [Pet {type = dog, sex = male, age = 4, name = Petka, size = S, ownerName = Vasia Pupkin, registrationDate = 2024-02-29T17:21:39.958761500, healthState = GOOD}, Pet {
+	type = cat, sex = female, age = 1, name = Momo, ownerName = Vasia Pupkin,registrationDate = 17:21 29/02/2024,
+	healthState = UNKNOWN
+}]
+	registrationClientDate= 29.02.2024 17:21
+}

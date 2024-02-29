@@ -1,3 +1,4 @@
+
 {ODESSA=[], UNKNOWN=[], KYIV=[Client {
 	firstName = Vaasia, lastName = Pupkin, email = qe.qwe@qwe.com, location = KYIV, pets= [Pet {type = dog, sex = male, age = 4, name = Petka, size = S, ownerName = Vaasia Pupkin, registrationDate = 2024-02-29T17:41:39.279716900, healthState = GOOD}]
 	registrationClientDate= 29.02.2024 17:41

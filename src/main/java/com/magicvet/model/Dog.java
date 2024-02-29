@@ -72,7 +72,6 @@ public class Dog extends Pet{
 
 
         }
-
         public static Size fromString(String value) {
             try {
                 Dog.Size.valueOf(value);
@@ -83,6 +82,7 @@ public class Dog extends Pet{
             System.out.println("Unable to parse value '" + value + "'. Using default value: " + UNKNOWN);
             return UNKNOWN;
         }
+
 
 // Попередній варіант коду
   //      public static Size fromString(String value) {

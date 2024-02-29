@@ -2,6 +2,6 @@ Client {
 	firstName = Nastia, lastName = Kravets, email = nastia.kra@gmail.com, location = ODESSA, pets= [Pet {
 	type = cat, sex = female, age = 4, name = Momo, ownerName = Nastia Kravets,registrationDate = 16:50 29/02/2024,
 	healthState = GOOD
-}, Pet {type = dog, sex = male, age = 1, name = Ugoliyok, size = UNKNOWN, ownerName = Nastia Kravets, registrationDate = 2024-02-29T16:50:52.016141400, healthState = UNKNOWN}]
+}, Pet {type = dog, sex = male, age = 2, name = Ugoliyok, size = UNKNOWN, ownerName = Nastia Kravets, registrationDate = 2024-02-29T16:50:52.016141400, healthState = UNKNOWN}]
 	registrationClientDate= 29.02.2024 16:50
 }

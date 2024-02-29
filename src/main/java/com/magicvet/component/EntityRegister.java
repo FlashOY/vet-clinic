@@ -73,7 +73,7 @@ public class EntityRegister {
             registerPets(client);
             System.out.println(client);
         }
-//here is new
+//here is new 29022024
        String v_String = String.valueOf(client);
         try (BufferedWriter bufferedWriter = new BufferedWriter(
                 new OutputStreamWriter(new FileOutputStream("Information_about_clients.txt")))) {

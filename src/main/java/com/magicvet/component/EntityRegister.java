@@ -6,12 +6,16 @@ import main.java.com.magicvet.model.Pet;
 import main.java.com.magicvet.service.ClientService;
 import main.java.com.magicvet.service.PetService;
 
+import java.io.*;
 import java.util.*;
 
 public class EntityRegister {
 
     private static final ClientService clientServise = new ClientService();
     private static final PetService petService = new PetService();
+    public static char[] v_String;
+
+
 
     static void registerClients() {
         List<Client> clients = new ArrayList<>();
@@ -59,6 +63,7 @@ public class EntityRegister {
         clientsByLocation.put(Client.Location.UNKNOWN, unknownLocation);
 
         return clientsByLocation;
+
     }
 
     private static Client addClient () {
@@ -67,6 +72,16 @@ public class EntityRegister {
         if(client != null) {
             registerPets(client);
             System.out.println(client);
+        }
+
+       String v_String = String.valueOf(client);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(
+                new OutputStreamWriter(new FileOutputStream("Information_about_clients.txt")))) {
+            bufferedWriter.write(String.valueOf(v_String));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }   catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
         return client;
@@ -105,5 +120,7 @@ public class EntityRegister {
             System.out.println("Incorrect answer. Please try again.");
             return verifyPepeating(message); //рекурсивний запуск методу у разі вводу некоректного значення
         }
+
+
     }
 }

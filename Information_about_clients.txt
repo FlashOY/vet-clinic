@@ -1,7 +1,4 @@
 Client {
-	firstName = Nastia, lastName = Kravets, email = nastia.kra@gmail.com, location = ODESSA, pets= [Pet {
-	type = cat, sex = female, age = 4, name = Momo, ownerName = Nastia Kravets,registrationDate = 16:50 29/02/2024,
-	healthState = GOOD
-}, Pet {type = dog, sex = male, age = 2, name = Ugoliyok, size = UNKNOWN, ownerName = Nastia Kravets, registrationDate = 2024-02-29T16:50:52.016141400, healthState = UNKNOWN}]
-	registrationClientDate= 29.02.2024 16:50
+	firstName = Alex, lastName = Yasnyi, email = qwe.qwe@qwe.com, location = UNKNOWN, pets= [Pet {type = dog, sex = male, age = 4, name = Petka, size = XL, ownerName = Alex Yasnyi, registrationDate = 2024-02-29T17:12:52.191939800, healthState = GOOD}]
+	registrationClientDate= 29.02.2024 17:12
 }
